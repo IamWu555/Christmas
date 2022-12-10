@@ -47,7 +47,7 @@
             var maxW = document.body.clientWidth,
                 maxH = document.body.clientHeight,
                 left = Math.random() * maxW,
-                bottom = left - (Math.random() - 0.5) * 0.2 * maxW, //保证落下的位置水平有变化，但不大
+                bottom = left - (Math.random() - 0.5) * 1.0 * maxW, //保证落下的位置水平有变化，但不大
                 opacity = 0.7 + 0.3 * Math.random();
             speed = 30;
             size = 20 + 10 * Math.random(), //字体20-30
@@ -63,7 +63,7 @@
             }, 3000, function() {
                 $(this).remove() //这一步很关键，要把落下的去掉，不然会越积越多
             });
-        }, 20) //20ms产生一个
+        }, 50) //20ms产生一个
     })
 </script>
 </html>
