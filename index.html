@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IamWu555</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link href="https://cdn.bootcdn.net/ajax/libs/uikit/3.15.15/css/uikit.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="uk-container uk-container-large">
+        <div class="uk-card uk-card-default uk-align-center uk-width-1-2@m">
+            <div class="uk-card-header">
+                <div class="uk-grid-small uk-flex-middle" uk-grid>
+                    <div class="uk-width-auto">
+                        <img class="uk-border-circle" width="40" height="40" src="images/avatar.jpg">
+                    </div>
+                    <div class="uk-width-expand">
+                        <div class="uk-card-badge uk-label">IamWu555</div>
+                        <h3 class="uk-card-title uk-margin-remove-bottom">IamWu555</h3>
+                        <p class="uk-text-meta uk-margin-remove-top"><a href="http://www.coolapk.com/u/1624371">酷安@IamWu555</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-card-body">
+                <p>有时拽点小文，整点时空意义、物质基本结构，探讨古典文化、世界格局，也能打打游戏吹吹牛逼。</p>
+            </div>
+            <div class="uk-card-footer">
+                了解更多，请进入<a href="https://www.wu555.ink" class="uk-button uk-button-text">⌈IamWu555⌋</a>
+            </div>
+        </div>
+
+        <div class="uk-card uk-card-default uk-card-body uk-align-center uk-width-1-2@m">
+            <h3 class="uk-card-title">近期文章</h3>
+            <ul class="uk-list uk-list-divider">
+                <li><a id="url1" class="uk-button uk-button-text"><span class="uk-text-secondary" id="title1"></span>/<span class="uk-text-muted uk-text-small" id="time1"></span></a></li>
+                <li><a id="url2" class="uk-button uk-button-text"><span class="uk-text-secondary" id="title2"></span>/<span class="uk-text-muted uk-text-small" id="time2"></span></a></li>
+                <li><a id="url3" class="uk-button uk-button-text"><span class="uk-text-secondary" id="title3"></span>/<span class="uk-text-muted uk-text-small" id="time3"></span></a></li>
+                <li><a id="url4" class="uk-button uk-button-text"><span class="uk-text-secondary" id="title4"></span>/<span class="uk-text-muted uk-text-small" id="time4"></span></a></li>
+                <li><a class="uk-button uk-button-text" href="https://www.wu555.ink/archives/"><span class="uk-text-secondary">…………</span></a></li>
+            </ul>
+        </div>
+        <script type="text/javascript">
+            if (window.XMLHttpRequest)
+              {// code for IE7+, Firefox, Chrome, Opera, Safari
+            
+              xmlhttp=new XMLHttpRequest();
+            
+              }
+            
+            else
+            
+              {// code for IE6, IE5
+            
+              xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            
+              }
+            
+            xmlhttp.open("GET","https://www.wu555.ink/atom.xml",false);
+            xmlhttp.send();
+            
+            xmlDoc=xmlhttp.responseXML;
+            
+             
+            document.getElementById("title1").innerHTML=
+            xmlDoc.getElementsByTagName("title")[1].childNodes[0].nodeValue;
+            document.getElementById("time1").innerHTML=
+            xmlDoc.getElementsByTagName("published")[0].childNodes[0].nodeValue.slice(0,10);
+            let a = document.getElementById('url1');
+	            a.href = xmlDoc.getElementsByTagName("id")[1].childNodes[0].nodeValue;
+            
+            document.getElementById("title2").innerHTML=
+            xmlDoc.getElementsByTagName("title")[2].childNodes[0].nodeValue;
+            document.getElementById("time2").innerHTML=
+            xmlDoc.getElementsByTagName("published")[1].childNodes[0].nodeValue.slice(0,10);
+            let b = document.getElementById('url2');
+	            b.href = xmlDoc.getElementsByTagName("id")[2].childNodes[0].nodeValue;
+            
+            document.getElementById("title3").innerHTML=
+            xmlDoc.getElementsByTagName("title")[3].childNodes[0].nodeValue;
+            document.getElementById("time3").innerHTML=
+            xmlDoc.getElementsByTagName("published")[2].childNodes[0].nodeValue.slice(0,10);
+            let c = document.getElementById('url3');
+	            c.href = xmlDoc.getElementsByTagName("id")[3].childNodes[0].nodeValue;
+            
+            document.getElementById("title4").innerHTML=
+            xmlDoc.getElementsByTagName("title")[4].childNodes[0].nodeValue;
+            document.getElementById("time4").innerHTML=
+            xmlDoc.getElementsByTagName("published")[3].childNodes[0].nodeValue.slice(0,10);
+            let d = document.getElementById('url4');
+	            d.href = xmlDoc.getElementsByTagName("id")[4].childNodes[0].nodeValue;
+        </script>
+
+        <div class="uk-card uk-card-default uk-card-body uk-align-center uk-width-1-2@m">
+            <h3 class="uk-card-title">其他页面</h3>
+            <ul class="uk-list uk-list-striped">
+                <li><a class="uk-button uk-button-text" href="http://message.wu555.ink">留言板</a></li>
+                <li><a class="uk-button uk-button-text" href="http://baidu.wu555.ink">让我帮你百度一下</a></li>
+                <li><a class="uk-button uk-button-text" href="http://puppy.wu555.ink/Christmas.html">留言板</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
